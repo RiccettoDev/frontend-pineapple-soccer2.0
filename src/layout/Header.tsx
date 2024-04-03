@@ -12,7 +12,7 @@ export default function Header(){
     <div className="bg-slate-900 w-full h-24 flex p-4 items-center justify-between shadow-2xl shadow-black absolute">
       <div>
         <Link to={'/'} className="flex items-center p-2 custom:m-12">
-          <img src={logo} alt="logo image" className='h-20 hover:scale-110'/>
+          <img src={logo} alt="logo image" className='animate-slide-down h-20 hover:scale-110'/>
           <h1 className="text-slate-900 lg:text-lime-500 lg:font-extrabold lg:text-3xl lg:mt-6 lg:hover:scale-110 lg:hover:text-white">PineappleSoccer</h1>
           <button onClick={() => setVisible(!visible)} className="right-8 absolute cursor-pointer text-lime-500 hover:text-white hover:scale-110  lg:hidden">
             <TiThMenu size={50}/>
@@ -29,7 +29,7 @@ export default function Header(){
       </div>
       <div className="top-0 absolute">
         <div className={visible ? '' : 'hidden'}>
-          <div className="w-[300px] h-full right-0 bg-slate-800 fixed z-50 p-6 lg:hidden">
+          <div className="animate-opacity w-[300px] h-full right-0 bg-slate-800 fixed z-50 p-6 lg:hidden">
             <button onClick={() => setVisible(!visible)} className="text-lime-500 hover:text-white hover:scale-110">
               <IoIosCloseCircle size={38}/>
             </button>
