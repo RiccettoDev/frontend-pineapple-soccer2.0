@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage.tsx'
 import Home from './pages/Home.tsx'
+import Profile from './pages/Profile.tsx'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />
+      },
+      {
+        path: '/profile',
+        element: <Profile />
       }
     ]
   }

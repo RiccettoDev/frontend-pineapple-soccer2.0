@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       screens: { custom: '2560px' },
+      borderRadius: { shield: '51% 49% 49% 51% / 10% 10% 60% 60%' },
       keyframes: {
         slideDown: {
           '0%': { transform: 'translatey(-10px)', opacity: '0' },
