@@ -18,12 +18,14 @@ export default function Profile(){
 
   return(
     <div>
-      <div className="flex flex-col items-center justify-center w-full top-[150px] absolute">
-        <Shield name1="Neymar Jr." name2="" img={neymar} />
-        <Stars qtd={10} />
-        <div className="flex flex-col items-center justify-center lg:flex-row mt-12">
-          <div className="mt-10">
-            <Field position="z"/>
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full top-[150px] absolute">
+        <div className="flex flex-col items-center">
+          <Shield name1="Neymar Jr." name2="" img={neymar} />
+          <Stars qtd={10} />
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <div className="m-4 mt-12">
+            <Field position="a"/>
           </div>
           <div className="flex">
             <Statistic
@@ -36,7 +38,7 @@ export default function Profile(){
             />
           </div>
         </div>
-        <div className="mb-6 lg:top-4 lg:right-12 lg:absolute custom:z-50">
+        <div className="mt-6 mb-6 lg:top-4 lg:right-12 lg:absolute custom:z-50">
           <button onClick={() => setVisible(!visible)}>
             <ButtonLink title="Editar" />
           </button>

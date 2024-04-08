@@ -15,7 +15,7 @@ export default function Login(){
         <label className="text-lime-700 font-extrabold animate-slide-down">Digite seu usuário:</label>
         <input type="text" className="bg-slate-300 rounded-3xl w-full h-12 flex justify-center items-center text-center placeholder: text-lime-700 font-extrabold placeholder:text-lime-700 placeholder:font-extrabold shadow-lg shadow-lime-700" placeholder="User"/>
         <label className="text-lime-700 font-extrabold animate-slide-down">Digite sua senha:</label>
-        <input type="text" className="bg-slate-300 rounded-3xl w-full h-12 flex justify-center items-center text-center placeholder: text-lime-700 font-extrabold placeholder:text-lime-700 placeholder:font-extrabold shadow-lg shadow-lime-700" placeholder="Password"/>
+        <input type="password" className="bg-slate-300 rounded-3xl w-full h-12 flex justify-center items-center text-center placeholder: text-lime-700 font-extrabold placeholder:text-lime-700 placeholder:font-extrabold shadow-lg shadow-lime-700" placeholder="Password"/>
         <Link to={'/home'}>
           <ButtonLink title='Entrar' />
         </Link>

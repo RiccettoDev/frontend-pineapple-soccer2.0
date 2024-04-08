@@ -21,10 +21,10 @@ export default function Header(){
       </div>
       <div>
         <ul className='hidden lg:flex lg:m-16 lg:mb-10 lg:gap-6 custom:m-36 custom:gap-12'>
+          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/home'}>Home</Link></li>
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/profile'}>Perfil</Link></li>
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Jogadores</Link></li>
-          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Jogadores</Link></li>
-          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Jogadores</Link></li>
+          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Pelada</Link></li>
         </ul>
       </div>
       <div className="top-0 absolute">
