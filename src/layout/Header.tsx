@@ -34,10 +34,10 @@ export default function Header(){
               <IoIosCloseCircle size={38}/>
             </button>
             <ul className="flex flex-col right-12 top-28 gap-6 absolute">
+              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/home'}>Home</Link></li>
               <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/profile'}>Perfil</Link></li>
-              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Jogador</Link></li>
-              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Jogador</Link></li>
-              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Jogador</Link></li>
+              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Jogadores</Link></li>
+              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Pelada</Link></li>
             </ul>
           </div>
           <button onClick={() => setVisible(!visible)} className="w-full h-[2500px] right-0 bg-black opacity-55 fixed z-40 lg:hidden"></button>

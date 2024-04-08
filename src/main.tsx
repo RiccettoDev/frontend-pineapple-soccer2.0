@@ -5,6 +5,7 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
+import Login from './pages/Login.tsx'
 import ErrorPage from './pages/ErrorPage.tsx'
 import Home from './pages/Home.tsx'
 import Profile from './pages/Profile.tsx'
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: '/home',
         element: <Home />
+      },
+      {
+        path: '/',
+        element: <Login />
       },
       {
         path: '/profile',
