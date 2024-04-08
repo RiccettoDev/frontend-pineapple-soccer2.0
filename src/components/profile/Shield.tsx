@@ -1,4 +1,4 @@
-import range from '../assets/img/range.svg'
+import range from '../../assets/img/profile/range.svg'
 
 interface ShieldProps{
   name1: string;

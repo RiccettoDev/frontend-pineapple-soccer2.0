@@ -1,5 +1,5 @@
-import field from '../assets/img/field.png'
-import pinPlayer from '../assets/img/pinPlayer.png'
+import field from '../../assets/img/profile/field.png'
+import pinPlayer from '../../assets/img/profile/pinPlayer.png'
 
 interface FieldProps{
   position: string
