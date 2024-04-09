@@ -9,6 +9,7 @@ import Login from './pages/Login.tsx'
 import ErrorPage from './pages/ErrorPage.tsx'
 import Home from './pages/Home.tsx'
 import Profile from './pages/Profile.tsx'
+import Players from './pages/Players.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <Profile />
+      },
+      {
+        path: '/players',
+        element: <Players />
       }
     ]
   }

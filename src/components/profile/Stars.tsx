@@ -4,108 +4,110 @@ import { BsStar } from "react-icons/bs";
 
 interface StarsProps{
   qtd: number
+  size: number
+  color: string
 }
 
-export default function Stars({ qtd }: StarsProps){
+export default function Stars({ qtd, size, color }: StarsProps){
   return(
     <div className="flex gap-2 mt-8">
       {qtd === 10 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 9 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarHalf size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarHalf size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 8 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 7 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarHalf size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarHalf size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 6 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 5 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarHalf size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarHalf size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 4 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 3 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStarHalf size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStarHalf size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 2 && (
         <>
-          <BsStarFill size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarFill size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 1 && (
         <>
-          <BsStarHalf size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStarHalf size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
       {qtd === 0 && (
         <>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
-          <BsStar size={38} color="#fb8c00"/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
+          <BsStar size={size} color={`${color}`}/>
         </>
       )}
     </div>

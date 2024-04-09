@@ -13,7 +13,7 @@ export default function Header(){
       <div>
         <Link to={'/'} className="flex items-center p-2 custom:m-12">
           <img src={logo} alt="logo image" className='animate-slide-down h-20 hover:scale-110'/>
-          <h1 className="text-slate-900 lg:text-lime-500 lg:font-extrabold lg:text-3xl lg:mt-6 lg:hover:scale-110 lg:hover:text-white">PineappleSoccer</h1>
+          <h1 className="text-lime-500 font-extrabold text-xl mt-8 lg:text-3xl lg:mt-6 hover:scale-110 hover:text-white">PineappleSoccer</h1>
         </Link>
         <button onClick={() => setVisible(!visible)} className="top-6 right-8 absolute cursor-pointer text-lime-500 hover:text-white hover:scale-110  lg:hidden">
           <TiThMenu size={50}/>
@@ -23,7 +23,7 @@ export default function Header(){
         <ul className='hidden lg:flex lg:m-16 lg:mb-10 lg:gap-6 custom:m-36 custom:gap-12'>
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/home'}>Home</Link></li>
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/profile'}>Perfil</Link></li>
-          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Jogadores</Link></li>
+          <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/players'}>Jogadores</Link></li>
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/'}>Pelada</Link></li>
         </ul>
       </div>
@@ -36,7 +36,7 @@ export default function Header(){
             <ul className="flex flex-col right-12 top-28 gap-6 absolute">
               <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/home'}>Home</Link></li>
               <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/profile'}>Perfil</Link></li>
-              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Jogadores</Link></li>
+              <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/players'}>Jogadores</Link></li>
               <li className="font-extrabold text-2xl text-lime-500 hover:text-white hover:scale-110"><Link onClick={() => setVisible(!visible)} to={'/'}>Pelada</Link></li>
             </ul>
           </div>
