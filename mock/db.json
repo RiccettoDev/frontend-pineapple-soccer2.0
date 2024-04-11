@@ -12,7 +12,7 @@
       "force": "50",
       "attack": "60",
       "defense": "70",
-      "gols": "12",
+      "goals": "12",
       "assistance": "8",
       "status": "mensalista",
       "img": "../src/assets/img/players/user.png"
@@ -29,7 +29,7 @@
       "force": "90",
       "attack": "100",
       "defense": "60",
-      "gols": "72",
+      "goals": "72",
       "assistance": "34",
       "status": "mensalista",
       "img": "../src/assets/img/players/neymarJr.png"
@@ -46,7 +46,7 @@
       "force": "70",
       "attack": "100",
       "defense": "50",
-      "gols": "88",
+      "goals": "88",
       "assistance": "72",
       "status": "mensalista",
       "img": "../src/assets/img/players/lionelMessi.png"
@@ -63,7 +63,7 @@
       "force": "85",
       "attack": "100",
       "defense": "50",
-      "gols": "132",
+      "goals": "132",
       "assistance": "22",
       "status": "mensalista",
       "img": "../src/assets/img/players/cristianoRonaldo.png"
@@ -80,7 +80,7 @@
       "force": "100",
       "attack": "52",
       "defense": "100",
-      "gols": "13",
+      "goals": "13",
       "assistance": "9",
       "status": "mensalista",
       "img": "../src/assets/img/players/vanDijk.png"
