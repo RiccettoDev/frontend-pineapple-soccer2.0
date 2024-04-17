@@ -6,18 +6,18 @@ import { PiSoccerBallFill } from "react-icons/pi";
 import { SiIfood } from "react-icons/si";
 
 interface StatisticProps{
-  force: string
-  attack: string
-  defense: string
-  position: string
-  goals: string
-  assistance: string
+  force?: string
+  attack?: string
+  defense?: string
+  position?: string
+  goals?: string
+  assistance?: string
 }
 
 export default function Statistic({ force, attack, defense, position, goals, assistance }: StatisticProps){
-  const forceNumber = parseInt(force)
-  const attackNumber = parseInt(attack)
-  const defenseNumber = parseInt(defense)
+  const forceNumber = parseInt(force || '0', 10);
+  const attackNumber = parseInt(attack || '0', 10);
+  const defenseNumber = parseInt(defense || '0', 10);
 
   return(
     <div>

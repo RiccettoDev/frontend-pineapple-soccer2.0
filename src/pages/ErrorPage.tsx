@@ -7,7 +7,7 @@ export default function ErrorPage(){
   return(
     <div className='flex flex-col items-center justify-center p-14 mt-20 lg:mt-0 lg:p-36'>
       <div className='absolute top-12 left-12'>
-        <Link to='/'>
+        <Link to='/home'>
           <ButtonLink title='Voltar'/>
         </Link>
       </div>

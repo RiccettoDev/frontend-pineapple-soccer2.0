@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react"
 import CardPlayer from "../components/players/CardPlayer"
 
+import Layout from "../layout/Layout"
+
 interface PlayersProps {
   id: string
   name: string
@@ -23,7 +25,7 @@ export default function Players() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/user', {
+      fetch('http://localhost:5000/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -39,10 +41,12 @@ export default function Players() {
   }, []);
 
   return (
-    <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
-      {players.map((player) => (
-        <CardPlayer key={player.id} playerProps={player}/>
-      ))}
-    </div>
+    <Layout>
+      <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
+        {players.map((player) => (
+          <CardPlayer key={player.id} playerProps={player}/>
+        ))}
+      </div>
+    </Layout>
   );
 }

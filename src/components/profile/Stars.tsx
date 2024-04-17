@@ -3,15 +3,16 @@ import { BsStarHalf } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
 
 interface StarsProps{
-  qtd: number
+  qtd?: string
   size: number
   color: string
 }
 
 export default function Stars({ qtd, size, color }: StarsProps){
+  const qtdStars = parseInt(qtd || '0', 10);
   return(
     <div className="flex gap-2 mt-8">
-      {qtd === 10 && (
+      {qtdStars === 10 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -20,7 +21,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStarFill size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 9 && (
+      {qtdStars === 9 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -29,7 +30,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStarHalf size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 8 && (
+      {qtdStars === 8 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -38,7 +39,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 7 && (
+      {qtdStars === 7 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -47,7 +48,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 6 && (
+      {qtdStars === 6 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -56,7 +57,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 5 && (
+      {qtdStars === 5 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -65,7 +66,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 4 && (
+      {qtdStars === 4 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarFill size={size} color={`${color}`}/>
@@ -74,7 +75,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 3 && (
+      {qtdStars === 3 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStarHalf size={size} color={`${color}`}/>
@@ -83,7 +84,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 2 && (
+      {qtdStars === 2 && (
         <>
           <BsStarFill size={size} color={`${color}`}/>
           <BsStar size={size} color={`${color}`}/>
@@ -92,7 +93,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 1 && (
+      {qtdStars === 1 && (
         <>
           <BsStarHalf size={size} color={`${color}`}/>
           <BsStar size={size} color={`${color}`}/>
@@ -101,7 +102,7 @@ export default function Stars({ qtd, size, color }: StarsProps){
           <BsStar size={size} color={`${color}`}/>
         </>
       )}
-      {qtd === 0 && (
+      {qtdStars === 0 && (
         <>
           <BsStar size={size} color={`${color}`}/>
           <BsStar size={size} color={`${color}`}/>

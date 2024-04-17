@@ -1,9 +1,9 @@
 import range from '../../assets/img/profile/range.svg'
 
 interface ShieldProps{
-  name1: string;
-  name2: string;
-  img: string;
+  name1?: string;
+  name2?: string;
+  img?: string;
 }
 
 export default function Shield({img, name1, name2}: ShieldProps){
