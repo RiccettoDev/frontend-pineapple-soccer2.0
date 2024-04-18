@@ -125,22 +125,22 @@ export default function Calendar() {
   }
 
   return(
-    <div className="w-[90%] h-[420px] bg-slate-700 rounded-xl mt-6 mb-6">
-      <div className="w-full h-[25%] flex items-center justify-center bg-lime-500 rounded-t-xl">
-        <h1 className="text-lime-600 font-extrabold text-3xl">
-          <span className="text-2xl text-lime-700 mx-4">{year} </span>{dayOfTheWeek} {day} <span className="text-3xl text-lime-700 mx-4">{monthText}</span></h1>
+    <div className="w-[90%] h-[420px] bg-slate-700 rounded-xl mt-6 mb-6 lg:w-[70%] lg:h-[820px] custom:w-[35%]">
+      <div className="w-full h-[25%] flex items-center justify-center bg-lime-500 rounded-t-xl lg:h-[15%]">
+        <h1 className="text-lime-600 font-extrabold text-3xl lg:text-6xl">
+          <span className="text-2xl text-lime-700 mx-4 lg:text-5xl">{year} </span>{dayOfTheWeek} {day} <span className="text-3xl text-lime-700 mx-4 lg:text-5xl">{monthText}</span></h1>
       </div>
       <div className="flex flex-col w-full h-full">
-        <div className="flex w-full mx-8 gap-9 mt-2">
-          <h1 className="text-white font-extrabold">D</h1>
-          <h1 className="text-white font-extrabold">S</h1>
-          <h1 className="text-white font-extrabold">T</h1>
-          <h1 className="text-white font-extrabold">Q</h1>
-          <h1 className="text-white font-extrabold">Q</h1>
-          <h1 className="text-white font-extrabold">S</h1>
-          <h1 className="text-white font-extrabold">S</h1>
+        <div className="flex w-full mx-8 gap-9 mt-2 lg:gap-24 lg:m-5 lg:ml-24">
+          <h1 className="text-white font-extrabold lg:text-2xl">D</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">S</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">T</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">Q</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">Q</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">S</h1>
+          <h1 className="text-white font-extrabold lg:text-2xl">S</h1>
         </div>
-        <div className="flex flex-wrap w-full items-center justify-center -mb-[-90px] p-1">
+        <div className="flex flex-wrap w-full items-center justify-center -mb-[-90px] p-1 lg:gap-7">
         {(() => {
           const elements = [];
           let dayNumber = 0;
@@ -149,7 +149,7 @@ export default function Calendar() {
           for (let index = 0; index < 42; index++) {
             if (index < FirstDayMonth) {
               elements.push(
-                <div key={index} className="flex items-center justify-center w-[11%] h-9 rounded-full bg-white m-1 opacity-50">
+                <div key={index} className="flex items-center justify-center w-[11%] h-7 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
                   <h1 className="text-lime-700 text-lg font-extrabold">x</h1>
                 </div>
               );
@@ -167,13 +167,13 @@ export default function Calendar() {
               // Se passamos pelo dia 31 e subsequentes, definimos como 'x'
               if (passed31) {
                 elements.push(
-                  <div key={index} className="flex items-center justify-center w-[11%] h-9 rounded-full bg-white m-1 opacity-50">
+                  <div key={index} className="flex items-center justify-center w-[11%] h-9 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
                     <h1 className="text-lime-700 text-lg font-extrabold">x</h1>
                   </div>
                 );
               } else {
                 elements.push(
-                  <div key={index} className={`flex items-center justify-center w-[11%] h-9 rounded-full ${day === dayNumber ? 'bg-lime-500' : 'bg-white'} m-1`}>
+                  <div key={index} className={`flex items-center justify-center w-[11%] h-9 rounded-full ${day === dayNumber ? 'bg-lime-500' : 'bg-white'} m-1 lg:w-[9%] lg:h-14`}>
                     <h1 className="text-lime-700 text-lg font-extrabold">{dayNumber}</h1>
                   </div>
                 );
