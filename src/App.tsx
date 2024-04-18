@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage"
 import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import Players from "./pages/Players"
+import Match from "./pages/Match"
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
 
           <Route path="/players" element={<ProtectedLayout>
             <Players />
+          </ProtectedLayout>} />
+
+          <Route path="/match" element={<ProtectedLayout>
+            <Match />
           </ProtectedLayout>} />
           
           <Route path="/*" element={<ErrorPage/>} />
