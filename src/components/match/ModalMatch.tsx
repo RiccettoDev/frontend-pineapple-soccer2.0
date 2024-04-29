@@ -7,6 +7,7 @@ export default function ModalMatch({ toggleModal }: any) {
 
   const closeModal = () => {
     setVisible(false)
+    console.log(visible);
     toggleModal()
   };
 
