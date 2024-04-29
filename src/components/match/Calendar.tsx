@@ -1,6 +1,14 @@
+import { useState } from "react"
 import { FirstDayMonth } from "../../services/firstDayMonth"
+import ModalMatch from "./ModalMatch"
 
 export default function Calendar() {
+  const [visible, setVisible] = useState(false)
+
+  const toggleModal = () => {
+    setVisible(!visible)
+  }
+
   const currentDate = new Date()
   const year = currentDate.getFullYear()
   const month = currentDate.getMonth() + 1
@@ -124,7 +132,7 @@ export default function Calendar() {
       monthDays = 0;
   }
 
-  return(
+  return (
     <div className="w-[90%] h-[420px] bg-slate-700 rounded-xl mt-6 mb-6 lg:w-[70%] lg:h-[820px] custom:w-[35%]">
       <div className="w-full h-[25%] flex items-center justify-center bg-lime-500 rounded-t-xl lg:h-[15%]">
         <h1 className="text-lime-600 font-extrabold text-3xl lg:text-6xl">
@@ -141,48 +149,59 @@ export default function Calendar() {
           <h1 className="text-white font-extrabold lg:text-2xl">S</h1>
         </div>
         <div className="flex flex-wrap w-full items-center justify-center -mb-[-90px] p-1 lg:gap-7">
-        {(() => {
-          const elements = [];
-          let dayNumber = 0;
-          let passed31 = false; // Flag para indicar se já passamos pelo dia 31
+          {(() => {
+            const elements = [];
+            let dayNumber = 0;
+            let passed31 = false; // Flag para indicar se já passamos pelo dia 31
 
-          for (let index = 0; index < 42; index++) {
-            if (index < FirstDayMonth) {
-              elements.push(
-                <div key={index} className="flex items-center justify-center w-[11%] h-7 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
-                  <h1 className="text-lime-700 text-lg font-extrabold">x</h1>
-                </div>
-              );
-            } else {
-              if (dayNumber === 0) {
-                dayNumber = 1;
-              } else {
-                dayNumber++;
-                if (dayNumber > monthDays) {
-                  dayNumber = dayNumber - monthDays;
-                  passed31 = true; // Indica que passamos pelo dia 31
-                }
-              }
-
-              // Se passamos pelo dia 31 e subsequentes, definimos como 'x'
-              if (passed31) {
+            for (let index = 0; index < 42; index++) {
+              if (index < FirstDayMonth) {
                 elements.push(
-                  <div key={index} className="flex items-center justify-center w-[11%] h-9 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
+                  <div key={index} className="flex items-center justify-center w-[11%] h-7 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
                     <h1 className="text-lime-700 text-lg font-extrabold">x</h1>
                   </div>
                 );
               } else {
-                elements.push(
-                  <div key={index} className={`flex items-center justify-center w-[11%] h-9 rounded-full ${day === dayNumber ? 'bg-lime-500' : 'bg-white'} m-1 lg:w-[9%] lg:h-14`}>
-                    <h1 className="text-lime-700 text-lg font-extrabold">{dayNumber}</h1>
-                  </div>
-                );
+                if (dayNumber === 0) {
+                  dayNumber = 1;
+                } else {
+                  dayNumber++;
+                  if (dayNumber > monthDays) {
+                    dayNumber = dayNumber - monthDays;
+                    passed31 = true; // Indica que passamos pelo dia 31
+                  }
+                }
+
+                // Se passamos pelo dia 31 e subsequentes, definimos como 'x'
+                if (passed31) {
+                  elements.push(
+                    <div key={index} className="flex items-center justify-center w-[11%] h-9 rounded-full bg-white m-1 opacity-50 lg:w-[9%] lg:h-14">
+                      <h1 className="text-lime-700 text-lg font-extrabold">x</h1>
+                    </div>
+                  );
+                } else {
+                  if ((currentDate.getDay() === 1) || (currentDate.getDay() === 2)) {
+                    elements.push(
+                      <button onClick={() => setVisible(!visible)} key={index} className={`flex items-center justify-center w-[11%] h-9 rounded-full ${day === dayNumber ? 'bg-lime-500 animate-pulse' : 'bg-white'} m-1 lg:w-[9%] lg:h-14`}>
+                        <h1 className="text-lime-700 text-lg font-extrabold">{dayNumber}</h1>
+                      </button>
+                    );
+                  } else {
+                    elements.push(
+                      <div key={index} className={`flex items-center justify-center w-[11%] h-9 rounded-full ${day === dayNumber ? 'bg-lime-500' : 'bg-white'} m-1 lg:w-[9%] lg:h-14`}>
+                        <h1 className="text-lime-700 text-lg font-extrabold">{dayNumber}</h1>
+                      </div>
+                    );
+                  }
+                }
               }
             }
-          }
 
-          return elements;
-        })()}
+            return elements;
+          })()}
+        </div>
+        <div className={visible ? 'flex items-center justify-center' : 'hidden'}>
+          <ModalMatch toggleModal={toggleModal} />
         </div>
       </div>
     </div>

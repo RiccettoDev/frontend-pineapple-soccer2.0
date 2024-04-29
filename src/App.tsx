@@ -10,14 +10,15 @@ import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import Players from "./pages/Players"
 import Match from "./pages/Match"
+import Test from "./pages/Test"
 
 function App() {
 
-  return(
+  return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login/>} />
+          <Route path="/" element={<Login />} />
 
           <Route path="/home" element={<ProtectedLayout>
             <Home />
@@ -34,8 +35,12 @@ function App() {
           <Route path="/match" element={<ProtectedLayout>
             <Match />
           </ProtectedLayout>} />
-          
-          <Route path="/*" element={<ErrorPage/>} />
+
+          <Route path="/test" element={<ProtectedLayout>
+            <Test />
+          </ProtectedLayout>} />
+
+          <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
