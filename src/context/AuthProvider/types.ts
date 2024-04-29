@@ -3,7 +3,6 @@ export interface IUser {
   password?: string;
   name?: string;
   surname?: string;
-  surname2?: string;
   stars?: string;
   position?: string;
   force?: string;

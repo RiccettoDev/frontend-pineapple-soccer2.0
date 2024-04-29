@@ -8,7 +8,6 @@ interface PlayersProps {
   id: string
   name: string
   surname: string
-  surname2: string
   force: string
   attack: string
   defense: string
@@ -25,7 +24,7 @@ export default function Players() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/users', {
+      fetch('http://localhost:3333/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
@@ -34,7 +33,7 @@ export default function Players() {
         .then(resp => resp.json())
         .then(data => {
           console.log(data);
-          setPlayers(data);
+          setPlayers(data.users);
         })
         .catch(err => console.log(err));
     }, 500);
@@ -43,9 +42,13 @@ export default function Players() {
   return (
     <Layout>
       <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
-        {players.map((player) => (
-          <CardPlayer key={player.id} playerProps={player}/>
-        ))}
+        {players.length > 0 ? (
+          players.map((player) => (
+            <CardPlayer key={player.id} playerProps={player} />
+          ))
+        ) : (
+          <p className="text-3xl text-white font-extrabold">Loading...</p>
+        )}
       </div>
     </Layout>
   );

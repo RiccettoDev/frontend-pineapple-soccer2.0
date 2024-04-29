@@ -8,14 +8,14 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   const [user, setUser] = useState<IUser | null>()
 
   useEffect(() => {
-    const user =  getUserLocalStorage()
+    const user = getUserLocalStorage()
 
-    if(user) {
+    if (user) {
       setUser(user)
     }
   }, [])
 
-  async function authenticate (email: string, password: string){
+  async function authenticate(email: string, password: string) {
     //const response = await LoginRequest(email, password)
 
     //const payLoad = {token: response.token, email}
@@ -25,9 +25,9 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
     try {
       // Carregar dados do arquivo db.json
-      const response = await fetch("/mock/db.json");
+      const response = await fetch("http://localhost:3333/users");
       const data = await response.json();
-      
+
       // Verificar se existe um usuário com o email e senha fornecidos
       const authenticatedUser = data.users.find(
         (user: IUser) => user.email === email && user.password === password
@@ -46,13 +46,13 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
     }
   }
 
-  function logout () {
+  function logout() {
     setUser(null)
     setUserLocalStorage(null)
   }
 
-  return(
-    <AuthContext.Provider value={{...user, authenticate, logout}}>
+  return (
+    <AuthContext.Provider value={{ ...user, authenticate, logout }}>
       {children}
     </AuthContext.Provider>
   )
