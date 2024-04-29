@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
 
     try {
       // Carregar dados do arquivo db.json
-      const response = await fetch("http://apiolympics.online/users");
+      const response = await fetch("https://apiolympics.online/users");
       const data = await response.json();
 
       // Verificar se existe um usuário com o email e senha fornecidos
