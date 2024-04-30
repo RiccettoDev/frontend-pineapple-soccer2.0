@@ -24,7 +24,7 @@ export default function Players() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('https://apiolympics.online/users', {
+      fetch('http://91.108.126.64:3333/users', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'
