@@ -1,7 +1,7 @@
 // Componente Players
 import { useState, useEffect } from "react"
 import CardPlayer from "../components/players/CardPlayer"
-
+import { Api } from "../services/api"
 import Layout from "../layout/Layout"
 
 interface PlayersProps {
@@ -23,20 +23,18 @@ export default function Players() {
   const [players, setPlayers] = useState<PlayersProps[]>([]);
 
   useEffect(() => {
+    const fetchPlayers = async () => {
+      try {
+        const response = await Api.get('/users'); // Alterado de 'createApiInstance()' para 'Api'
+        setPlayers(response.data.users);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     setTimeout(() => {
-      fetch('https://apiolympics.online/', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
-        .then(resp => resp.json())
-        .then(data => {
-          console.log(data);
-          setPlayers(data.users);
-        })
-        .catch(err => console.log(err));
-    }, 500);
+      fetchPlayers();
+    }, 500)
   }, []);
 
   return (

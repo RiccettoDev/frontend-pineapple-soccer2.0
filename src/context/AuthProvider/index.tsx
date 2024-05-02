@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { IAuthProvider, IContext, IUser } from "./types";
 import { getUserLocalStorage, setUserLocalStorage } from "./util";
+import { Api } from "../../services/api";
 
 export const AuthContext = createContext<IContext>({} as IContext)
 
@@ -16,20 +17,13 @@ export const AuthProvider = ({ children }: IAuthProvider) => {
   }, [])
 
   async function authenticate(email: string, password: string) {
-    //const response = await LoginRequest(email, password)
-
-    //const payLoad = {token: response.token, email}
-
-    //setUser(payLoad)
-    //setUserLocalStorage(payLoad)
 
     try {
       // Carregar dados do arquivo db.json
-      const response = await fetch("https://apiolympics.online/");
-      const data = await response.json();
+      const response = await Api.get('/users');
 
       // Verificar se existe um usuário com o email e senha fornecidos
-      const authenticatedUser = data.users.find(
+      const authenticatedUser = response.data.users.find(
         (user: IUser) => user.email === email && user.password === password
       );
 
