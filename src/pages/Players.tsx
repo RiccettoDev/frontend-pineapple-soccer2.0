@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react"
 import CardPlayer from "../components/players/CardPlayer"
 import { Api } from "../services/api"
-import Layout from "../layout/Layout"
 
 interface PlayersProps {
   id: string
@@ -38,16 +37,14 @@ export default function Players() {
   }, []);
 
   return (
-    <Layout>
-      <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
-        {players.length > 0 ? (
-          players.map((player) => (
-            <CardPlayer key={player.id} playerProps={player} />
-          ))
-        ) : (
-          <p className="text-3xl text-white font-extrabold">Loading...</p>
-        )}
-      </div>
-    </Layout>
+    <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
+      {players.length > 0 ? (
+        players.map((player) => (
+          <CardPlayer key={player.id} playerProps={player} />
+        ))
+      ) : (
+        <p className="text-3xl text-white font-extrabold">Loading...</p>
+      )}
+    </div>
   );
 }

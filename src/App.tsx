@@ -11,6 +11,7 @@ import Profile from "./pages/Profile"
 import Players from "./pages/Players"
 import Match from "./pages/Match"
 import Test from "./pages/Test"
+import Layout from "./layout/Layout"
 
 function App() {
 
@@ -21,23 +22,33 @@ function App() {
           <Route path="/" element={<Login />} />
 
           <Route path="/home" element={<ProtectedLayout>
-            <Home />
+            <Layout>
+              <Home />
+            </Layout>
           </ProtectedLayout>} />
 
           <Route path="/profile" element={<ProtectedLayout>
-            <Profile />
+            <Layout>
+              <Profile />
+            </Layout>
           </ProtectedLayout>} />
 
           <Route path="/players" element={<ProtectedLayout>
-            <Players />
+            <Layout>
+              <Players />
+            </Layout>
           </ProtectedLayout>} />
 
           <Route path="/match" element={<ProtectedLayout>
-            <Match />
+            <Layout>
+              <Match />
+            </Layout>
           </ProtectedLayout>} />
 
           <Route path="/test" element={<ProtectedLayout>
-            <Test />
+            <Layout>
+              <Test />
+            </Layout>
           </ProtectedLayout>} />
 
           <Route path="/*" element={<ErrorPage />} />

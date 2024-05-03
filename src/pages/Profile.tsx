@@ -3,8 +3,6 @@ import { getUserLocalStorage } from "../context/AuthProvider/util"
 import { IUser } from "../context/AuthProvider/types"
 import { Api } from "../services/api"
 
-import Layout from "../layout/Layout"
-
 import Shield from "../components/profile/Shield"
 import Stars from "../components/profile/Stars"
 import Field from "../components/profile/Field"
@@ -39,38 +37,36 @@ export default function Profile() {
   }, [visible])
 
   return (
-    <Layout>
-      <div>
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full top-[150px] absolute">
-          <div className="animate-slide-down flex flex-col items-center">
-            <Shield name1={user?.name} name2={user?.surname} img={user?.img} />
-            <Stars qtd={user?.stars} size={38} color="#fb8c00" />
-          </div>
-          <div className=" animate-slide-down flex flex-col items-center justify-center">
-            <div className="m-4 mt-12">
-              <Field position={user?.position} />
-            </div>
-            <div className="flex">
-              <Statistic
-                force={user?.force}
-                attack={user?.attack}
-                defense={user?.defense}
-                position={user?.position}
-                goals={user?.goals}
-                assistance={user?.assistance}
-              />
-            </div>
-          </div>
-          <div className="animate-slide-down mt-6 mb-6 lg:top-4 lg:right-12 lg:absolute custom:z-50">
-            <button onClick={() => setVisible(!visible)}>
-              <ButtonLink title="Editar" />
-            </button>
-          </div>
-          {visible && (
-            <ModalProfile toggleModal={toggleModal} />
-          )}
+    <div>
+      <div className="flex flex-col lg:flex-row items-center justify-center w-full top-[150px] absolute">
+        <div className="animate-slide-down flex flex-col items-center">
+          <Shield name1={user?.name} name2={user?.surname} img={user?.img} />
+          <Stars qtd={user?.stars} size={38} color="#fb8c00" />
         </div>
+        <div className=" animate-slide-down flex flex-col items-center justify-center">
+          <div className="m-4 mt-12">
+            <Field position={user?.position} />
+          </div>
+          <div className="flex">
+            <Statistic
+              force={user?.force}
+              attack={user?.attack}
+              defense={user?.defense}
+              position={user?.position}
+              goals={user?.goals}
+              assistance={user?.assistance}
+            />
+          </div>
+        </div>
+        <div className="animate-slide-down mt-6 mb-6 lg:top-4 lg:right-12 lg:absolute custom:z-50">
+          <button onClick={() => setVisible(!visible)}>
+            <ButtonLink title="Editar" />
+          </button>
+        </div>
+        {visible && (
+          <ModalProfile toggleModal={toggleModal} />
+        )}
       </div>
-    </Layout>
+    </div>
   )
 }
