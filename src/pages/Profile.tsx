@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { getUserLocalStorage } from "../context/AuthProvider/util"
 import { IUser } from "../context/AuthProvider/types"
+import { Api } from "../services/api"
 
 import Layout from "../layout/Layout"
 
@@ -11,7 +12,7 @@ import Statistic from "../components/profile/Statistic"
 import ButtonLink from "../components/ButtonLink"
 import ModalProfile from "../components/profile/ModalProfile"
 
-export default function Profile(){
+export default function Profile() {
   const [visible, setVisible] = useState(false)
   const [user, setUser] = useState<IUser | null>()
 
@@ -20,24 +21,34 @@ export default function Profile(){
   }
 
   useEffect(() => {
-    const user =  getUserLocalStorage()
+    const user = getUserLocalStorage()
+    const userId = user.id
 
-    if(user) {
-      setUser(user)
-    }
-  }, [])
+    const fetchUser = async () => {
+      try {
+        const response = await Api.get(`/users/${userId}`);
+        if (user) {
+          setUser(response.data)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-  return(
+    fetchUser()
+  }, [visible])
+
+  return (
     <Layout>
       <div>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full top-[150px] absolute">
           <div className="animate-slide-down flex flex-col items-center">
             <Shield name1={user?.name} name2={user?.surname} img={user?.img} />
-            <Stars qtd={user?.stars} size={38} color="#fb8c00"/>
+            <Stars qtd={user?.stars} size={38} color="#fb8c00" />
           </div>
           <div className=" animate-slide-down flex flex-col items-center justify-center">
             <div className="m-4 mt-12">
-              <Field position={user?.position}/>
+              <Field position={user?.position} />
             </div>
             <div className="flex">
               <Statistic

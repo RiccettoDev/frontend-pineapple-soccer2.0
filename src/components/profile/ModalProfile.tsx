@@ -40,7 +40,7 @@ export default function ModalProfile({ toggleModal }: any) {
               </button>
             </div>
           </div>
-          <FormEditProfile />
+          <FormEditProfile closeModal={closeModal} />
         </div>
       </div>
       <button onClick={closeModal} className="w-full h-[2500px] right-0 bg-black opacity-55 fixed z-30"></button>
