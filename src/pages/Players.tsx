@@ -39,7 +39,7 @@ export default function Players() {
   return (
     <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
       {players.length > 0 ? (
-        players.map((player, index) => (
+        players.map((player) => (
           <CardPlayer key={player.id} playerProps={player} />
         ))
       ) : (
