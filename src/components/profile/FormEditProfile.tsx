@@ -31,6 +31,8 @@ export default function FormEditProfile({ closeModal }: FormEditProfileProps) {
 
     const fetchUser = async () => {
       try {
+        console.log(`Aqui o user é: ${user.id}`);
+
         const response = await Api.get(`/users/${userId}`);
         if (user) {
           setUser(response.data)

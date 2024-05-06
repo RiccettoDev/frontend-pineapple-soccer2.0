@@ -26,6 +26,7 @@ export default function Profile() {
       try {
         const response = await Api.get(`/users/${userId}`);
         if (user) {
+          console.log(user);
           setUser(response.data)
         }
       } catch (error) {

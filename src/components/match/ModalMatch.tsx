@@ -17,9 +17,9 @@ export default function ModalMatch({ toggleModal }: any) {
         <IoIosCloseCircle size={38} />
       </button>
       <div className="flex flex-col items-center justify-center mt-4 mb-6">
-        <h1 className="font-extrabold text-lime-400 text-2xl">Fala aew peladeiro!</h1>
+        <h1 className="font-extrabold text-white text-2xl">Fala aew peladeiro!</h1>
         <h1 className="font-extrabold text-lime-400 text-2xl">Hoje é dia de jogo</h1>
-        <h1 className="font-extrabold text-lime-400 text-2xl">Borá se escalar?</h1>
+        <h1 className="font-extrabold text-white text-2xl">Borá se escalar?</h1>
 
       </div>
       <div className="w-full flex items-center justify-center gap-6">

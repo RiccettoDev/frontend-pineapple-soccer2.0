@@ -19,6 +19,8 @@ export default function ModalProfile({ toggleModal }: any) {
 
   useEffect(() => {
     const user = getUserLocalStorage()
+    console.log(user);
+
 
     if (user) {
       setUser(user)

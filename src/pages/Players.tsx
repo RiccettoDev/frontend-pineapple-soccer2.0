@@ -24,7 +24,7 @@ export default function Players() {
   useEffect(() => {
     const fetchPlayers = async () => {
       try {
-        const response = await Api.get('/users'); // Alterado de 'createApiInstance()' para 'Api'
+        const response = await Api.get('/users');
         setPlayers(response.data.users);
       } catch (error) {
         console.log(error);
@@ -39,7 +39,7 @@ export default function Players() {
   return (
     <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
       {players.length > 0 ? (
-        players.map((player) => (
+        players.map((player, index) => (
           <CardPlayer key={player.id} playerProps={player} />
         ))
       ) : (
