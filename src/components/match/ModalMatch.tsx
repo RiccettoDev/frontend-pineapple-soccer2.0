@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { IoIosCloseCircle } from "react-icons/io";
 
-import img from '../../../img/manutencao.png'
-
 export default function ModalMatch({ toggleModal }: any) {
   const [visible, setVisible] = useState(true)
 
