@@ -1,5 +1,4 @@
 import field from '../assets/img/teams/field.png'
-import img from '../../img/manutencao.png'
 
 export default function Teams() {
   const currentDate = new Date()
@@ -9,7 +8,7 @@ export default function Teams() {
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center pt-32">
-      {/*<h1 className="text-white font-extrabold text-3xl">{`${day}/${month}/${year}`}</h1>
+      <h1 className="text-white font-extrabold text-3xl">{`${day}/${month}/${year}`}</h1>
       <h1 className="font-extrabold text-3xl mt-4 text-cyan-700">Azul</h1>
       <div className='flex flex-col pt-20 mb-8 relative lg:w-[50%] lg:pt-36 lg:mb-28'>
         <img src={field} alt="image field" className='w-[390px] transform rotate-90 lg:w-full' />
@@ -66,11 +65,6 @@ export default function Teams() {
         <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[245px] top-[1420px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[2215px]'>
           <img src="https://i.ibb.co/D7C3j1c/Selton.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-      </div>*/}
-
-      <div className='flex flex-col items-center justify-center w-[90%] h-[400px] bg-lime-500 rounded-lg'>
-        <h1 className='text-lime-950 font-extrabold text-2xl'>Estamos em manutenção</h1>
-        <img src={img} alt="image" />
       </div>
     </div>
   )

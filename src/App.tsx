@@ -10,7 +10,6 @@ import Home from "./pages/Home"
 import Profile from "./pages/Profile"
 import Players from "./pages/Players"
 import Match from "./pages/Match"
-import Teams from "./pages/Teams"
 import Test from "./pages/Test"
 import Layout from "./layout/Layout"
 
@@ -48,7 +47,7 @@ function App() {
 
           <Route path="/teams" element={<ProtectedLayout>
             <Layout>
-              <Teams />
+              <Test />
             </Layout>
           </ProtectedLayout>} />
 
