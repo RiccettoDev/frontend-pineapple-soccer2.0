@@ -12,6 +12,7 @@ import Players from "./pages/Players"
 import Match from "./pages/Match"
 import Test from "./pages/Test"
 import Layout from "./layout/Layout"
+import Teams from "./pages/Teams"
 
 function App() {
 
@@ -53,7 +54,7 @@ function App() {
 
           <Route path="/test" element={<ProtectedLayout>
             <Layout>
-              <Test />
+              <Teams />
             </Layout>
           </ProtectedLayout>} />
 
