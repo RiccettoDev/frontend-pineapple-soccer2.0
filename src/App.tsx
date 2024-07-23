@@ -48,13 +48,13 @@ function App() {
 
           <Route path="/teams" element={<ProtectedLayout>
             <Layout>
-              <Test />
+              <Teams />
             </Layout>
           </ProtectedLayout>} />
 
           <Route path="/test" element={<ProtectedLayout>
             <Layout>
-              <Teams />
+              <Test />
             </Layout>
           </ProtectedLayout>} />
 
