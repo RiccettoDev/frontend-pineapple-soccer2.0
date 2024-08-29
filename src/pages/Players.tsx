@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import CardPlayer from "../components/players/CardPlayer";
 import { Api } from "../services/api";
 import { IoIosCloseCircle } from "react-icons/io";
