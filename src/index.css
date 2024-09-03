@@ -4,6 +4,5 @@
 
 body {
   background-color: #1E293B;
-  overflow-y: hidden;
-  width: max-content;
+  overflow-x: hidden;
 }

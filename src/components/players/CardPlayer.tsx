@@ -21,7 +21,7 @@ const PlayerStats = ({ playerProps }: { playerProps: PlayerProps }) => {
   return (
     <div className="flex flex-col relative">
       <button
-        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[3em] right-[13.5em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
+        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[3em] right-[11.5em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
         onClick={() => playerProps.onVote(playerProps)}
       >
         <h1 className="text-white font-extrabold">Vote</h1>
@@ -52,7 +52,7 @@ const PlayerStats = ({ playerProps }: { playerProps: PlayerProps }) => {
       </h1>
       <h1 className="text-yellow-700 font-extrabold">
         <span className="text-lime-900 drop-shadow-lg shadow-black">Status:</span>{" "}
-        {playerProps.status}
+        {playerProps.status === 'mensalista' ? 'mensal' : 'avulso'}
       </h1>
     </div>
   );
@@ -85,7 +85,7 @@ const CardPlayer = ({ playerProps }: { playerProps: PlayerProps }) => {
           <h1 className="text-yellow-700 font-extrabold -mb-8">
             <span className="text-lime-900 drop-shadow-lg shadow-black">Nota:</span>
           </h1>
-          <Stars qtd={playerProps.stars} size={25} color="#5a8a10" />
+          <Stars qtd={playerProps.stars} size={20} color="#5a8a10" />
         </div>
       </div>
     </div>

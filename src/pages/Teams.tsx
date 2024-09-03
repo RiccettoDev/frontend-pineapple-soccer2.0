@@ -18,13 +18,13 @@ export default function Teams() {
         <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[95px] top-[180px] active:scale-150 lg:w-28 lg:h-28 lg:left-[155px] lg:top-[290px]'>
           <img src="https://i.ibb.co/mTv8Zrh/Breno.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[245px] top-[180px] active:scale-150 lg:w-28 lg:h-28 lg:left-[370px] lg:top-[290px]'>
+        <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[215px] top-[180px] active:scale-150 lg:w-28 lg:h-28 lg:left-[370px] lg:top-[290px]'>
           <img src="https://i.ibb.co/vs1m56L/Renan-Rosa.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
         <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[95px] top-[280px] active:scale-150 lg:w-28 lg:h-28 lg:left-[155px] lg:top-[450px]'>
           <img src="https://i.ibb.co/N6wXJJQ/Almeida.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[245px] top-[280px] active:scale-150 lg:w-28 lg:h-28 lg:left-[370px] lg:top-[450px]'>
+        <div className='w-14 h-14 bg-cyan-700 rounded-full absolute left-[215px] top-[280px] active:scale-150 lg:w-28 lg:h-28 lg:left-[370px] lg:top-[450px]'>
           <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
       </div>
@@ -37,13 +37,13 @@ export default function Teams() {
         <div className='w-14 h-14 bg-white rounded-full absolute left-[95px] top-[860px] active:scale-150 lg:w-28 lg:h-28 lg:left-[470px] lg:top-[1270px]'>
           <img src="https://i.ibb.co/4J7PXBv/Bruno-Bonin.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-white rounded-full absolute left-[245px] top-[860px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[1270px]'>
+        <div className='w-14 h-14 bg-white rounded-full absolute left-[215px] top-[860px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[1270px]'>
           <img src="https://i.ibb.co/WVbbmVR/Renan-Bonin.png" alt="" className='w-[100%] h-[100%] rounded-full ' />
         </div>
         <div className='w-14 h-14 bg-white rounded-full absolute left-[95px] top-[960px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[1440px]'>
           <img src="https://i.ibb.co/LpXvJcx/Kamacho.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-white rounded-full absolute left-[245px] top-[960px] active:scale-150 lg:w-28 lg:h-28 lg:left-[470px] lg:top-[1440px]'>
+        <div className='w-14 h-14 bg-white rounded-full absolute left-[215px] top-[960px] active:scale-150 lg:w-28 lg:h-28 lg:left-[470px] lg:top-[1440px]'>
           <img src="https://i.ibb.co/zh6CHZd/eduardo-Riccetto.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
       </div>
@@ -56,13 +56,13 @@ export default function Teams() {
         <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[95px] top-[1320px] active:scale-150 lg:w-28 lg:h-28 lg:left-[470px] lg:top-[2050px]'>
           <img src="https://i.ibb.co/BswWHj6/Batata.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[245px] top-[1320px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[2050px]'>
+        <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[215px] top-[1320px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[2050px]'>
           <img src="https://i.ibb.co/fG4wjK7/Matheus-Garcia.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
         <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[95px] top-[1420px] active:scale-150 lg:w-28 lg:h-28 lg:left-[470px] lg:top-[2215px]'>
           <img src="https://i.ibb.co/GcMyTcj/pedrin-removebg-preview.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
-        <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[245px] top-[1420px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[2215px]'>
+        <div className='w-14 h-14 bg-amber-400 rounded-full absolute left-[215px] top-[1420px] active:scale-150 lg:w-28 lg:h-28 lg:left-[685px] lg:top-[2215px]'>
           <img src="https://i.ibb.co/R034dxD/Mairon.png" alt="" className='w-[100%] h-[100%] rounded-full' />
         </div>
       </div>
