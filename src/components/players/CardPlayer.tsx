@@ -21,7 +21,7 @@ const PlayerStats = ({ playerProps }: { playerProps: PlayerProps }) => {
   return (
     <div className="flex flex-col relative">
       <button
-        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[4.5em] right-[13.5em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
+        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[3em] right-[13.5em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
         onClick={() => playerProps.onVote(playerProps)}
       >
         <h1 className="text-white font-extrabold">Vote</h1>
@@ -61,7 +61,7 @@ const PlayerStats = ({ playerProps }: { playerProps: PlayerProps }) => {
 const CardPlayer = ({ playerProps }: { playerProps: PlayerProps }) => {
   return (
     <div className="flex items-center w-full rounded-lg bg-yellow-400 lg:w-[500px]">
-      <div className="p-4">
+      <div className="p-4 -mb-8 mt-6">
         <div>
           <ShieldPlayers
             name1={playerProps.name}

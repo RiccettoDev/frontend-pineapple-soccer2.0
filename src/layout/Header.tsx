@@ -28,7 +28,7 @@ export default function Header() {
           <li className=' lg:text-lime-500 lg:font-extrabold lg:text-xl lg:hover:scale-105 lg:hover:text-white custom:text-3xl'><Link to={'/teams'}>Times</Link></li>
         </ul>
       </div>
-      <div className="top-0 absolute">
+      <div className="top-0 left-0 absolute">
         <div className={visible ? '' : 'hidden'}>
           <div className="animate-opacity w-[300px] h-full right-0 bg-slate-800 fixed z-50 p-6 lg:hidden">
             <button onClick={() => setVisible(!visible)} className="text-lime-500 hover:text-white hover:scale-110">
