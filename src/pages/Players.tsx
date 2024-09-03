@@ -23,7 +23,7 @@ interface PlayersProps {
   img: string;
   kick: string;
   pass: string;
-  headbutt: string
+  headbutt: string;
 }
 
 emailjs.init("k9tvPkQ1DGlpzD7kw");
@@ -32,18 +32,25 @@ export default function Players() {
   const [players, setPlayers] = useState<PlayersProps[]>([]);
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState<PlayersProps | null>(null);
-  const [user, setUser] = useState<IUser | null>()
+  const [user, setUser] = useState<IUser | null>(null);
 
+  // Estados para armazenar os valores dos inputs
+  const [force, setForce] = useState('');
+  const [attack, setAttack] = useState('');
+  const [defense, setDefense] = useState('');
+  const [kick, setKick] = useState('');
+  const [pass, setPass] = useState('');
+  const [headbutt, setHeadbutt] = useState('');
 
   useEffect(() => {
-    const user = getUserLocalStorage()
-    const userId = user.id
+    const user = getUserLocalStorage();
+    const userId = user.id;
 
     const fetchUser = async () => {
       try {
         const response = await Api.get(`/users/${userId}`);
         if (user) {
-          setUser(response.data)
+          setUser(response.data);
         }
       } catch (error) {
         console.log(error);
@@ -59,15 +66,19 @@ export default function Players() {
       }
     };
 
-    fetchUser()
-
-    setTimeout(() => {
-      fetchPlayers();
-    }, 500);
+    fetchUser();
+    fetchPlayers();
   }, []);
 
   const handleVoteClick = (player: PlayersProps) => {
     setSelectedPlayer(player);
+    // Inicializar os valores dos inputs com os valores do jogador selecionado
+    setForce(player.force);
+    setAttack(player.attack);
+    setDefense(player.defense);
+    setKick(player.kick);
+    setPass(player.pass);
+    setHeadbutt(player.headbutt);
     setModalIsVisible(true);
   };
 
@@ -80,12 +91,12 @@ export default function Players() {
       const templateParams = {
         user_name: `${user?.name} ${user?.surname}`,
         player_name: `${selectedPlayer.name} ${selectedPlayer.surname}`,
-        player_force: selectedPlayer.force,
-        player_attack: selectedPlayer.attack,
-        player_defense: selectedPlayer.defense,
-        player_shoot: selectedPlayer.kick,
-        player_pass: selectedPlayer.pass,
-        player_head: selectedPlayer.headbutt,
+        player_force: force,
+        player_attack: attack,
+        player_defense: defense,
+        player_shoot: kick,
+        player_pass: pass,
+        player_head: headbutt,
         to_name: "Pineapple Soccer",
         from_name: "Sua Aplicação"
       };
@@ -131,28 +142,58 @@ export default function Players() {
                 <div className="flex">
                   <h1 className="text-yellow-700 font-extrabold">
                     <span className="text-lime-700 drop-shadow-lg shadow-black">Vigor:</span>{" "}
-                    <input type="text" placeholder={`${selectedPlayer.force}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                    <input
+                      type="text"
+                      value={force}
+                      onChange={(e) => setForce(e.target.value)}
+                      className="w-14 bg-slate-700 rounded-lg text-center"
+                    />
                   </h1>
                 </div>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Ataque:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.attack}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input
+                    type="text"
+                    value={attack}
+                    onChange={(e) => setAttack(e.target.value)}
+                    className="w-14 bg-slate-700 rounded-lg text-center"
+                  />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Defesa:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.defense}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input
+                    type="text"
+                    value={defense}
+                    onChange={(e) => setDefense(e.target.value)}
+                    className="w-14 bg-slate-700 rounded-lg text-center"
+                  />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Chute:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.kick}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input
+                    type="text"
+                    value={kick}
+                    onChange={(e) => setKick(e.target.value)}
+                    className="w-14 bg-slate-700 rounded-lg text-center"
+                  />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Passe:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.pass}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input
+                    type="text"
+                    value={pass}
+                    onChange={(e) => setPass(e.target.value)}
+                    className="w-14 bg-slate-700 rounded-lg text-center"
+                  />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Cabeceio:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.headbutt}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input
+                    type="text"
+                    value={headbutt}
+                    onChange={(e) => setHeadbutt(e.target.value)}
+                    className="w-14 bg-slate-700 rounded-lg text-center"
+                  />
                 </h1>
                 <button onClick={handleSaveClick} className="bg-lime-700 text-lime-50 rounded-lg hover:opacity-40">Salvar</button>
               </div>
