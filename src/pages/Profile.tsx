@@ -37,7 +37,7 @@ export default function Profile() {
   }, [visible])
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="flex flex-col lg:flex-row items-center justify-center pt-40">
         <div className="animate-slide-down flex flex-col items-center">
           <Shield name1={user?.name} name2={user?.surname} img={user?.img} />
