@@ -14,6 +14,9 @@ interface PlayerProps {
   status: string;
   stars: string;
   img: string;
+  kick: string;
+  pass: string;
+  headbutt: string
   onVote: (player: PlayerProps) => void;
 }
 

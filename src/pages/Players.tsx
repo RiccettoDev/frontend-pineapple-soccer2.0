@@ -4,6 +4,7 @@ import { Api } from "../services/api";
 import { IoIosCloseCircle } from "react-icons/io";
 import ShieldPlayers from "../components/players/ShieldPlayers";
 import Stars from "../components/profile/Stars";
+import emailjs from 'emailjs-com';
 
 interface PlayersProps {
   id: string;
@@ -18,7 +19,12 @@ interface PlayersProps {
   status: string;
   stars: string;
   img: string;
+  kick: string;
+  pass: string;
+  headbutt: string
 }
+
+emailjs.init("k9tvPkQ1DGlpzD7kw");
 
 export default function Players() {
   const [players, setPlayers] = useState<PlayersProps[]>([]);
@@ -46,7 +52,32 @@ export default function Players() {
   };
 
   const closeModal = () => {
-    setModalIsVisible(false)
+    setModalIsVisible(false);
+  };
+
+  const handleSaveClick = () => {
+    if (selectedPlayer) {
+      const templateParams = {
+        player_name: `${selectedPlayer.name} ${selectedPlayer.surname}`,
+        player_force: selectedPlayer.force,
+        player_attack: selectedPlayer.attack,
+        player_defense: selectedPlayer.defense,
+        player_shoot: selectedPlayer.kick,
+        player_pass: selectedPlayer.pass,
+        player_head: selectedPlayer.headbutt,
+        to_name: "Pineapple Soccer",
+        from_name: "Sua Aplicação"
+      };
+
+      emailjs.send("service_8z299xu", "template_bgsgfpw", templateParams)
+        .then((response) => {
+          console.log("Email enviado com sucesso!", response.status, response.text);
+          closeModal();
+        })
+        .catch((error) => {
+          console.log("Falha ao enviar o e-mail.", error);
+        });
+    }
   };
 
   return (
@@ -91,17 +122,17 @@ export default function Players() {
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Chute:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.defense}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input type="text" placeholder={`${selectedPlayer.kick}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Passe:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.defense}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input type="text" placeholder={`${selectedPlayer.pass}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
                 </h1>
                 <h1 className="text-yellow-700 font-extrabold">
                   <span className="text-lime-700 drop-shadow-lg shadow-black">Cabeceio:</span>{" "}
-                  <input type="text" placeholder={`${selectedPlayer.defense}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
+                  <input type="text" placeholder={`${selectedPlayer.headbutt}%`} className="w-14 bg-slate-700 rounded-lg text-center" />
                 </h1>
-                <button className="bg-lime-700 text-lime-50 rounded-lg hover:opacity-40">Salvar</button>
+                <button onClick={handleSaveClick} className="bg-lime-700 text-lime-50 rounded-lg hover:opacity-40">Salvar</button>
               </div>
             </div>
           </div>
