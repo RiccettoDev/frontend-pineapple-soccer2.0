@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import CardPlayer from "../components/players/CardPlayer";
 import { Api } from "../services/api";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -33,6 +33,9 @@ export default function Players() {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState<PlayersProps | null>(null);
   const [user, setUser] = useState<IUser | null>(null);
+
+  // referente as estrelas
+  const [selectedNumber, setSelectedNumber] = useState('');
 
   // Estados para armazenar os valores dos inputs
   const [force, setForce] = useState('');
@@ -90,6 +93,7 @@ export default function Players() {
     if (selectedPlayer) {
       const templateParams = {
         user_name: `${user?.name} ${user?.surname}`,
+        player_stars: selectedNumber,
         player_name: `${selectedPlayer.name} ${selectedPlayer.surname}`,
         player_force: force,
         player_attack: attack,
@@ -110,6 +114,10 @@ export default function Players() {
           console.log("Falha ao enviar o e-mail.", error);
         });
     }
+  };
+
+  const handleChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+    setSelectedNumber(event.target.value);
   };
 
   return (
@@ -135,7 +143,24 @@ export default function Players() {
                   name2={selectedPlayer.surname}
                   img={selectedPlayer.img}
                 />
-                <Stars qtd={selectedPlayer.stars} size={25} color="#5a8a10" />
+                <div>
+                  <Stars qtd={selectedPlayer.stars} size={25} color="#5a8a10" />
+                  <label htmlFor="numberSelect">:</label>
+                  <select
+                    id="numberSelect"
+                    name="stars"
+                    value={selectedNumber}
+                    onChange={handleChange}
+                    className="bg-slate-700 text-lime-500 mt-4"
+                  >
+                    <option value="">0</option>
+                    {[1, 2, 3, 4, 5].map((num) => (
+                      <option key={num} value={num}>
+                        {num}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
               <div className="flex flex-col gap-4 p-4">
                 <h1 className="text-lime-500 font-extrabold">Habilidades:</h1>
