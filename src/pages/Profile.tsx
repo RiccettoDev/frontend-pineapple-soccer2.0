@@ -38,7 +38,7 @@ export default function Profile() {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full top-[150px] absolute">
+      <div className="flex flex-col lg:flex-row items-center justify-center pt-40">
         <div className="animate-slide-down flex flex-col items-center">
           <Shield name1={user?.name} name2={user?.surname} img={user?.img} />
           <Stars qtd={user?.stars} size={38} color="#fb8c00" />

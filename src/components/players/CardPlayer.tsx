@@ -21,7 +21,7 @@ const PlayerStats = ({ playerProps }: { playerProps: PlayerProps }) => {
   return (
     <div className="flex flex-col relative">
       <button
-        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[3em] right-[11.5em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
+        className="w-20 h-10 bg-lime-800 absolute lg:-top-10 lg:left-52 -top-[3em] right-[14em] z-10 rounded-lg flex justify-center items-center hover:opacity-50"
         onClick={() => playerProps.onVote(playerProps)}
       >
         <h1 className="text-white font-extrabold">Vote</h1>
