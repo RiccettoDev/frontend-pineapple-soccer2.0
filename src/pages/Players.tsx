@@ -5,6 +5,8 @@ import { IoIosCloseCircle } from "react-icons/io";
 import ShieldPlayers from "../components/players/ShieldPlayers";
 import Stars from "../components/profile/Stars";
 import emailjs from 'emailjs-com';
+import { IUser } from "../context/AuthProvider/types";
+import { getUserLocalStorage } from "../context/AuthProvider/util"
 
 interface PlayersProps {
   id: string;
@@ -30,8 +32,24 @@ export default function Players() {
   const [players, setPlayers] = useState<PlayersProps[]>([]);
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [selectedPlayer, setSelectedPlayer] = useState<PlayersProps | null>(null);
+  const [user, setUser] = useState<IUser | null>()
+
 
   useEffect(() => {
+    const user = getUserLocalStorage()
+    const userId = user.id
+
+    const fetchUser = async () => {
+      try {
+        const response = await Api.get(`/users/${userId}`);
+        if (user) {
+          setUser(response.data)
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     const fetchPlayers = async () => {
       try {
         const response = await Api.get('/users');
@@ -40,6 +58,8 @@ export default function Players() {
         console.log(error);
       }
     };
+
+    fetchUser()
 
     setTimeout(() => {
       fetchPlayers();
@@ -58,6 +78,7 @@ export default function Players() {
   const handleSaveClick = () => {
     if (selectedPlayer) {
       const templateParams = {
+        user_name: `${user?.name} ${user?.surname}`,
         player_name: `${selectedPlayer.name} ${selectedPlayer.surname}`,
         player_force: selectedPlayer.force,
         player_attack: selectedPlayer.attack,
@@ -82,6 +103,7 @@ export default function Players() {
 
   return (
     <div className="animate-slide-down flex flex-col items-center justify-center w-full mb-6 gap-4 pt-36 p-4">
+      <h1 className="text-white font-extrabold text-3xl">Olá {user?.name}!</h1>
       {players.length > 0 ? (
         players.map((player) => (
           <CardPlayer key={player.id} playerProps={{ ...player, onVote: handleVoteClick }} />
