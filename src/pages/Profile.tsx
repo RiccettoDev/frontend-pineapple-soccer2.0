@@ -58,7 +58,7 @@ export default function Profile() {
             />
           </div>
         </div>
-        <div className="animate-slide-down mt-6 mb-6 lg:top-4 lg:right-12 lg:absolute custom:z-50">
+        <div className="animate-slide-down mt-6 mb-6 lg:top-40 lg:right-12 lg:absolute custom:z-50">
           <button onClick={() => setVisible(!visible)}>
             <ButtonLink title="Editar" />
           </button>
