@@ -1,0 +1,257 @@
+{
+  "usersStatistic": [
+    {
+      "id": "1",
+      "name": "Breno Rossi",
+      "force": "95",
+      "attack": "95",
+      "defense": "85",
+      "kick": "80",
+      "pass": "80",
+      "headbutt": "45",
+      "stars": "4.0"
+    },
+    {
+      "id": "2",
+      "name": "Bruno Almeida",
+      "force": "60",
+      "attack": "63",
+      "defense": "72",
+      "kick": "67",
+      "pass": "73",
+      "headbutt": "37",
+      "stars": "3.1"
+    },
+    {
+      "id": "3",
+      "name": "Bruno Bonin",
+      "force": "76",
+      "attack": "79",
+      "defense": "79",
+      "kick": "86",
+      "pass": "83",
+      "headbutt": "63",
+      "stars": "3.9"
+    },
+    {
+      "id": "4",
+      "name": "Bruno Lejne",
+      "force": "30",
+      "attack": "45",
+      "defense": "45",
+      "kick": "45",
+      "pass": "50",
+      "headbutt": "55",
+      "stars": "2.3"
+    },
+    {
+      "id": "5",
+      "name": "Caio",
+      "force": "60",
+      "attack": "60",
+      "defense": "70",
+      "kick": "70",
+      "pass": "80",
+      "headbutt": "60",
+      "stars": "3.3"
+    },
+    {
+      "id": "6",
+      "name": "Cordeiro",
+      "force": "90",
+      "attack": "85",
+      "defense": "25",
+      "kick": "75",
+      "pass": "45",
+      "headbutt": "35",
+      "stars": "3.0"
+    },
+    {
+      "id": "7",
+      "name": "Darlei Soares",
+      "force": "70",
+      "attack": "60",
+      "defense": "60",
+      "kick": "70",
+      "pass": "50",
+      "headbutt": "30",
+      "stars": "2.8"
+    },
+    {
+      "id": "8",
+      "name": "Eduardo Riccetto",
+      "force": "50",
+      "attack": "63",
+      "defense": "74",
+      "kick": "48",
+      "pass": "68",
+      "headbutt": "95",
+      "stars": "3.3"
+    },
+    {
+      "id": "9",
+      "name": "Eliabe",
+      "force": "80",
+      "attack": "83",
+      "defense": "20",
+      "kick": "87",
+      "pass": "37",
+      "headbutt": "40",
+      "stars": "2.9"
+    },
+    {
+      "id": "10",
+      "name": "Gabriel Sipionato",
+      "force": "99",
+      "attack": "90",
+      "defense": "90",
+      "kick": "78",
+      "pass": "85",
+      "headbutt": "63",
+      "stars": "4.2"
+    },
+    {
+      "id": "11",
+      "name": "Joao Lejne",
+      "force": "75",
+      "attack": "70",
+      "defense": "55",
+      "kick": "60",
+      "pass": "70",
+      "headbutt": "40",
+      "stars": "3.1"
+    },
+    {
+      "id": "12",
+      "name": "Leonardo Camacho",
+      "force": "100",
+      "attack": "45",
+      "defense": "100",
+      "kick": "35",
+      "pass": "45",
+      "headbutt": "50",
+      "stars": "3.1"
+    },
+    {
+      "id": "13",
+      "name": "Lucas Camacho",
+      "force": "90",
+      "attack": "70",
+      "defense": "80",
+      "kick": "60",
+      "pass": "50",
+      "headbutt": "40",
+      "stars": "3.3"
+    },
+    {
+      "id": "14",
+      "name": "Mairon",
+      "force": "55",
+      "attack": "65",
+      "defense": "50",
+      "kick": "70",
+      "pass": "65",
+      "headbutt": "55",
+      "stars": "3.0"
+    },
+    {
+      "id": "15",
+      "name": "Matheus Garcia",
+      "force": "80",
+      "attack": "80",
+      "defense": "70",
+      "kick": "90",
+      "pass": "85",
+      "headbutt": "50",
+      "stars": "3.8"
+    },
+    {
+      "id": "16",
+      "name": "Pedro Sipionato",
+      "force": "90",
+      "attack": "70",
+      "defense": "80",
+      "kick": "60",
+      "pass": "70",
+      "headbutt": "55",
+      "stars": "3.5"
+    },
+    {
+      "id": "17",
+      "name": "Rafael",
+      "force": "55",
+      "attack": "58",
+      "defense": "58",
+      "kick": "50",
+      "pass": "45",
+      "headbutt": "45",
+      "stars": "2.6"
+    },
+    {
+      "id": "18",
+      "name": "Renan Bonin",
+      "force": "100",
+      "attack": "90",
+      "defense": "90",
+      "kick": "80",
+      "pass": "80",
+      "headbutt": "80",
+      "stars": "4.3"
+    },
+    {
+      "id": "19",
+      "name": "Renan Rosa",
+      "force": "80",
+      "attack": "80",
+      "defense": "40",
+      "kick": "65",
+      "pass": "70",
+      "headbutt": "55",
+      "stars": "3.3"
+    },
+    {
+      "id": "20",
+      "name": "Renato Bais",
+      "force": "30",
+      "attack": "60",
+      "defense": "20",
+      "kick": "73",
+      "pass": "78",
+      "headbutt": "75",
+      "stars": "2.8"
+    },
+    {
+      "id": "21",
+      "name": "Robson",
+      "force": "60",
+      "attack": "65",
+      "defense": "60",
+      "kick": "55",
+      "pass": "45",
+      "headbutt": "45",
+      "stars": "2.8"
+    },
+    {
+      "id": "22",
+      "name": "Rodrigo",
+      "force": "95",
+      "attack": "65",
+      "defense": "70",
+      "kick": "50",
+      "pass": "65",
+      "headbutt": "45",
+      "stars": "3.3"
+    },
+    {
+      "id": "23",
+      "name": "Selton",
+      "force": "70",
+      "attack": "60",
+      "defense": "70",
+      "kick": "60",
+      "pass": "60",
+      "headbutt": "30",
+      "stars": "2.9"
+    }
+  ]
+}
